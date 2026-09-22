@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #0c0a09;
+  --color-ink-soft: #161210;
+  --color-cream: #f4ede4;
+  --color-muted: #b8a896;
+  --color-gold: #c4a35a;
+  --color-gold-deep: #8b6b3a;
+  --color-line: #2a231c;
+  --color-surface: #1a1612;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --radius-lg: 1.25rem;
+  --radius-md: 0.85rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    background: var(--color-ink);
+    color: var(--color-cream);
+    font-family: var(--font-sans);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1, h2, h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@keyframes ken {
+  0% { transform: scale(1) translate3d(0, 0, 0); }
+  100% { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
+}
+
+@keyframes rise {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgb(196 163 90 / 0.45); }
+  50% { box-shadow: 0 0 0 12px rgb(196 163 90 / 0); }
+}
+
+.ken-burn {
+  animation: ken 18s ease-in-out infinite alternate;
+}
+
+.rise-in {
+  animation: rise 0.8s ease both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ken-burn,
+  .rise-in {
+    animation: none;
+  }
+}

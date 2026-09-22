@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AB Luxury CoLiving PG | Ladies PG in CV Raman Nagar, Bangalore</title>
+  <meta name="description" content="Premium Ladies Paying Guest (PG) in CV Raman Nagar, Bangalore. Safe, comfortable & fully equipped rooms with modern amenities. Private, Triple & Quad sharing options.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a365d;
+      --primary-light: #2c5282;
+      --accent: #c9a227;
+      --accent-soft: #f6e7b8;
+      --text: #1a202c;
+      --text-muted: #4a5568;
+      --bg: #ffffff;
+      --bg-soft: #f7fafc;
+      --border: #e2e8f0;
+      --success: #38a169;
+      --radius: 16px;
+      --shadow: 0 10px 40px -10px rgba(26, 54, 93, 0.15);
+      --shadow-lg: 0 25px 50px -12px rgba(26, 54, 93, 0.25);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ========== NAV ========== */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
+    }
+
+    .nav.scrolled {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color 0.2s;
+      position: relative;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      background: var(--primary);
+      color: white;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+    }
+
+    .nav-cta:hover {
+      background: var(--primary-light);
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(26, 54, 93, 0.3);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--primary);
+      margin: 5px 0;
+      transition: 0.3s;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      padding: 140px 0 100px;
+      background: linear-gradient(160deg, #f0f4f8 0%, #ffffff 50%, #f8f5ef 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--accent-soft);
+      color: #8a6d1b;
+      padding: 6px 14px;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--primary);
+      color: white;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+    }
+
+    .stat {
+      text-align: left;
+    }
+
+    .stat-num {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      font-family: 'Playfair Display', serif;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card {
+      background: white;
+      border-radius: 24px;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .hero-card-img {
+      height: 280px;
+      background: linear-gradient(135deg, #2c5282, #1a365d);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 4rem;
+      position: relative;
+    }
+
+    .hero-card-img::after {
+      content: '🏠';
+      font-size: 5rem;
+      opacity: 0.9;
+    }
+
+    .hero-card-body {
+      padding: 28px;
+    }
+
+    .hero-card-body h3 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: var(--primary);
+    }
+
+    .price-tag {
+      display: inline-block;
+      background: var(--accent-soft);
+      color: #8a6d1b;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      margin-bottom: 12px;
+    }
+
+    .hero-card-features {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .hero-card-features li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .hero-card-features li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+    }
+
+    /* ========== SECTIONS ========== */
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 56px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 12px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+
+    /* ========== ABOUT ========== */
+    .about {
+      background: var(--bg-soft);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-content h2 {
+      font-size: 2.2rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      font-size: 1.05rem;
+    }
+
+    .about-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .highlight {
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .highlight strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .highlight span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .about-visual {
+      background: linear-gradient(145deg, var(--primary), var(--primary-light));
+      border-radius: 24px;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .about-visual-content {
+      text-align: center;
+      z-index: 1;
+      padding: 40px;
+    }
+
+    .about-visual-content .big-icon {
+      font-size: 4rem;
+      margin-bottom: 16px;
+    }
+
+    .about-visual-content h3 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    /* ========== ROOMS ========== */
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .room-card {
+      background: white;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      overflow: hidden;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .room-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow);
+      border-color: transparent;
+    }
+
+    .room-card.featured {
+      border: 2px solid var(--accent);
+    }
+
+    .room-card.featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: var(--accent);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 12px;
+      border-radius: 50px;
+      z-index: 2;
+    }
+
+    .room-img {
+      height: 180px;
+      background: linear-gradient(135deg, #e2e8f0, #cbd5e0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+    }
+
+    .room-body {
+      padding: 24px;
+    }
+
+    .room-body h3 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .room-price {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .room-price span {
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .room-type {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .room-features {
+      list-style: none;
+      margin-bottom: 20px;
+    }
+
+    .room-features li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      padding: 4px 0;
+    }
+
+    .room-features li::before {
+      content: '•';
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .room-btn {
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      border-radius: 10px;
+      background: var(--bg-soft);
+      color: var(--primary);
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .room-card:hover .room-btn {
+      background: var(--primary);
+      color: white;
+    }
+
+    /* ========== AMENITIES ========== */
+    .amenities {
+      background: var(--bg-soft);
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .amenity {
+      background: white;
+      padding: 28px 20px;
+      border-radius: var(--radius);
+      text-align: center;
+      border: 1px solid var(--border);
+      transition: all 0.3s;
+    }
+
+    .amenity:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow);
+      border-color: var(--accent);
+    }
+
+    .amenity-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-soft);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 16px;
+      font-size: 1.6rem;
+    }
+
+    .amenity h4 {
+      font-size: 1.05rem;
+      color: var(--primary);
+      margin-bottom: 6px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+    }
+
+    .amenity p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ========== LOCATION ========== */
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: start;
+    }
+
+    .location-info h3 {
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+
+    .location-info p {
+      color: var(--text-muted);
+      margin-bottom: 24px;
+    }
+
+    .address-box {
+      background: var(--bg-soft);
+      padding: 24px;
+      border-radius: 14px;
+      border-left: 4px solid var(--accent);
+      margin-bottom: 24px;
+    }
+
+    .address-box strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .nearby {
+      display: grid;
+      gap: 12px;
+    }
+
+    .nearby-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .nearby-item span {
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
+
+    .map-placeholder {
+      background: linear-gradient(145deg, #e2e8f0, #cbd5e0);
+      border-radius: 20px;
+      height: 360px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      text-align: center;
+      padding: 40px;
+    }
+
+    .map-placeholder .map-icon {
+      font-size: 3.5rem;
+      margin-bottom: 12px;
+    }
+
+    /* ========== CONTACT ========== */
+    .contact {
+      background: linear-gradient(160deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -20%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(201, 162, 39, 0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .contact-inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .contact-content h2 {
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+    }
+
+    .contact-content p {
+      opacity: 0.9;
+      margin-bottom: 28px;
+      font-size: 1.1rem;
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 16px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .contact-item .icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .contact-form {
+      background: white;
+      padding: 36px;
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .contact-form h3 {
+      color: var(--primary);
+      margin-bottom: 24px;
+      font-size: 1.4rem;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: border-color 0.2s;
+      background: var(--bg-soft);
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: white;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-submit {
+      width: 100%;
+      padding: 14px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .form-submit:hover {
+      background: var(--primary-light);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: #0f172a;
+      color: #94a3b8;
+      padding: 50px 0 30px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 16px;
+    }
+
+    .footer-brand p {
+      font-size: 0.95rem;
+      max-width: 320px;
+      line-height: 1.7;
+    }
+
+    .footer-links h4 {
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1e293b;
+      padding-top: 24px;
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .hero-grid,
+      .about-grid,
+      .location-grid,
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .rooms-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
+      .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+
+      .hero {
+        padding: 120px 0 70px;
+      }
+
+      .hero-stats {
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: white;
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 14px 0;
+      font-weight: 500;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .mobile-menu a:last-child {
+      border-bottom: none;
+      margin-top: 12px;
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      border-radius: 10px;
+      padding: 14px;
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="logo">
+        <div class="logo-icon">AB</div>
+        <span>AB Luxury PG</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#rooms">Rooms</a></li>
+        <li><a href="#amenities">Amenities</a></li>
+        <li><a href="#location">Location</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-cta">Enquire Now</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#rooms">Rooms</a>
+    <a href="#amenities">Amenities</a>
+    <a href="#location">Location</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact">Enquire Now</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-badge">✨ Premium Ladies CoLiving</div>
+        <h1>Your Safe &amp; Comfortable<br><span>Home Away From Home</span></h1>
+        <p class="hero-desc">
+          AB Luxury CoLiving PG offers modern, secure, and fully-equipped accommodation exclusively for women in the heart of CV Raman Nagar, Bangalore.
+        </p>
+        <div class="hero-actions">
+          <a href="#rooms" class="btn btn-primary">View Rooms &amp; Pricing</a>
+          <a href="#contact" class="btn btn-outline">Book a Visit</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <div class="stat-num">Ladies</div>
+            <div class="stat-label">Only PG</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">24/7</div>
+            <div class="stat-label">Security</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">₹6,500+</div>
+            <div class="stat-label">Starting Rent</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="hero-card-img"></div>
+        <div class="hero-card-body">
+          <div class="price-tag">From ₹6,500 / month</div>
+          <h3>Premium Shared &amp; Private Rooms</h3>
+          <ul class="hero-card-features">
+            <li>Attached Western bathrooms</li>
+            <li>Free High-Speed WiFi</li>
+            <li>CCTV &amp; Safety Lockers</li>
+            <li>Washing Machine &amp; RO Water</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-content">
+        <div class="section-label">About Us</div>
+        <h2>Comfort, Safety &amp; Convenience in One Place</h2>
+        <p>
+          AB Luxury CoLiving PG is a well-maintained ladies-only paying guest accommodation located in SG Palya, CV Raman Nagar. We provide a secure, homely environment ideal for working women and students.
+        </p>
+        <p>
+          Our rooms come with essential modern amenities so you can focus on your work or studies without worrying about daily chores. Food options and self-cooking facilities are available to suit your lifestyle.
+        </p>
+        <div class="about-highlights">
+          <div class="highlight">
+            <strong>Ladies Only</strong>
+            <span>Safe &amp; exclusive for women</span>
+          </div>
+          <div class="highlight">
+            <strong>Prime Location</strong>
+            <span>Near Food City &amp; tech parks</span>
+          </div>
+          <div class="highlight">
+            <strong>Fully Furnished</strong>
+            <span>Bed, wardrobe, TV &amp; more</span>
+          </div>
+          <div class="highlight">
+            <strong>Clean &amp; Hygienic</strong>
+            <span>Well-maintained premises</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual">
+        <div class="about-visual-content">
+          <div class="big-icon">🏡</div>
+          <h3>AB Luxury CoLiving</h3>
+          <p>CV Raman Nagar, Bangalore</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section id="rooms">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Accommodation</div>
+        <h2>Choose Your Perfect Room</h2>
+        <p>Flexible sharing options designed for comfort and privacy. All rooms are Non-AC with attached bathrooms.</p>
+      </div>
+      <div class="rooms-grid">
+        <!-- Private -->
+        <div class="room-card">
+          <div class="room-img">🛏️</div>
+          <div class="room-body">
+            <h3>Private Room</h3>
+            <div class="room-price">₹8,000 <span>/ month</span></div>
+            <div class="room-type">Single Occupancy • Non-AC</div>
+            <ul class="room-features">
+              <li>Attached Western toilet</li>
+              <li>Hot water &amp; TV in room</li>
+              <li>Wardrobe &amp; Mattress</li>
+              <li>WiFi &amp; Electricity</li>
+            </ul>
+            <a href="#contact" class="room-btn">Enquire Now</a>
+          </div>
+        </div>
+        <!-- 3-Share -->
+        <div class="room-card featured">
+          <div class="room-img">🛏️🛏️🛏️</div>
+          <div class="room-body">
+            <h3>Triple Sharing</h3>
+            <div class="room-price">₹8,000 <span>/ month</span></div>
+            <div class="room-type">3-Share • Non-AC</div>
+            <ul class="room-features">
+              <li>Attached Western toilet</li>
+              <li>Hot water &amp; TV in room</li>
+              <li>Wardrobe &amp; Mattress</li>
+              <li>WiFi &amp; Electricity</li>
+            </ul>
+            <a href="#contact" class="room-btn">Enquire Now</a>
+          </div>
+        </div>
+        <!-- 4-Share -->
+        <div class="room-card">
+          <div class="room-img">🛏️🛏️🛏️🛏️</div>
+          <div class="room-body">
+            <h3>Quad Sharing</h3>
+            <div class="room-price">₹6,500 <span>/ month</span></div>
+            <div class="room-type">4-Share • Non-AC</div>
+            <ul class="room-features">
+              <li>Attached Western toilet</li>
+              <li>Hot water &amp; TV in room</li>
+              <li>Wardrobe &amp; Mattress</li>
+              <li>WiFi &amp; Electricity</li>
+            </ul>
+            <a href="#contact" class="room-btn">Enquire Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMENITIES -->
+  <section class="amenities" id="amenities">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Facilities</div>
+        <h2>Everything You Need</h2>
+        <p>Thoughtfully designed amenities to make your stay comfortable, secure and convenient.</p>
+      </div>
+      <div class="amenities-grid">
+        <div class="amenity">
+          <div class="amenity-icon">📶</div>
+          <h4>Free WiFi</h4>
+          <p>High-speed internet throughout</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">📹</div>
+          <h4>CCTV Security</h4>
+          <p>24/7 surveillance for safety</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">🚿</div>
+          <h4>Hot Water</h4>
+          <p>Available in all bathrooms</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">🧺</div>
+          <h4>Washing Machine</h4>
+          <p>In-house laundry facility</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">💧</div>
+          <h4>RO Water</h4>
+          <p>Purified drinking water</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">🛗</div>
+          <h4>Lift Access</h4>
+          <p>Convenient elevator facility</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">🔒</div>
+          <h4>Safety Lockers</h4>
+          <p>Secure storage for valuables</p>
+        </div>
+        <div class="amenity">
+          <div class="amenity-icon">🍳</div>
+          <h4>Self Cooking</h4>
+          <p>Kitchen access available</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Find Us</div>
+        <h2>Prime Location in CV Raman Nagar</h2>
+        <p>Well connected with good roads, medical centres and close to major tech parks.</p>
+      </div>
+      <div class="location-grid">
+        <div class="location-info">
+          <h3>Our Address</h3>
+          <div class="address-box">
+            <strong>AB Luxury CoLiving PG</strong>
+            H.NO- 107/2, 5th Main, SG Palya,<br>
+            CV Raman Nagar (opp. Food City),<br>
+            Bengaluru – 560093
+          </div>
+          <p>Conveniently located opposite Food City with excellent connectivity to Bagmane Tech Park and surrounding areas.</p>
+          <div class="nearby">
+            <div class="nearby-item"><span></span> Opposite Food City</div>
+            <div class="nearby-item"><span></span> Near Bagmane Tech Park</div>
+            <div class="nearby-item"><span></span> Close to medical centres</div>
+            <div class="nearby-item"><span></span> Good public transport access</div>
+          </div>
+        </div>
+        <div class="map-placeholder">
+          <div class="map-icon">📍</div>
+          <h3 style="color: var(--primary); margin-bottom: 8px;">CV Raman Nagar</h3>
+          <p>SG Palya, Bengaluru 560093</p>
+          <p style="margin-top: 16px; font-size: 0.9rem;">Open Google Maps and search<br>“AB Luxury PG CV Raman Nagar”</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner">
+      <div class="contact-content">
+        <h2>Ready to Move In?</h2>
+        <p>Get in touch with us to check room availability, schedule a visit, or ask any questions. We respond quickly!</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="icon">📍</div>
+            <div>
+              <strong>Address</strong><br>
+              H.NO- 107/2, 5th Main, SG Palya, CV Raman Nagar
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">👩</div>
+            <div>
+              <strong>Exclusive for</strong><br>
+              Ladies / Working Women &amp; Students
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="icon">🏠</div>
+            <div>
+              <strong>Room Types</strong><br>
+              Private • Triple Share • Quad Share
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <h3>Send an Enquiry</h3>
+        <form id="enquiryForm" onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone / WhatsApp</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+91 9XXXXXXXXX">
+          </div>
+          <div class="form-group">
+            <label for="room">Preferred Room</label>
+            <select id="room" name="room">
+              <option value="">Select room type</option>
+              <option value="private">Private Room – ₹8,000</option>
+              <option value="triple">Triple Sharing – ₹8,000</option>
+              <option value="quad">Quad Sharing – ₹6,500</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message (optional)</label>
+            <textarea id="message" name="message" placeholder="Any specific requirements or questions..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Submit Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">
+            <div class="logo-icon">AB</div>
+            <span>AB Luxury PG</span>
+          </a>
+          <p>Premium ladies-only co-living and paying guest accommodation in CV Raman Nagar, Bangalore. Safe, comfortable and well-connected.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#rooms">Rooms &amp; Pricing</a></li>
+            <li><a href="#amenities">Amenities</a></li>
+            <li><a href="#location">Location</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li>CV Raman Nagar, Bangalore</li>
+            <li>SG Palya, opp. Food City</li>
+            <li>Bengaluru – 560093</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 AB Luxury CoLiving PG. All rights reserved. | Designed for comfortable living.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 40) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    });
+
+    // Mobile menu
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+
+    // Close mobile menu on link click
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Form handler
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const room = document.getElementById('room').value;
+      const message = document.getElementById('message').value;
+
+      // In a real site you would send this to a backend / WhatsApp / email
+      alert(`Thank you, ${name}!\n\nYour enquiry has been noted.\nPhone: ${phone}\nRoom preference: ${room || 'Not specified'}\n\nPlease contact the PG management directly for confirmation and visit scheduling.`);
+      
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
